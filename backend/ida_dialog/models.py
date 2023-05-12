@@ -24,6 +24,7 @@ class idaObra(models.Model):
     obra = models.CharField(max_length=100, verbose_name="Obra: ")
     comando_positivo = models.CharField(max_length=50, verbose_name="Comando Positivo: ")
     comando_negativo = models.CharField(max_length=50, verbose_name="Comando Negativo: ")
+    descricao_obra = models.TextField(default='.', verbose_name="Descrição da Obra")
     audio = models.FileField(upload_to='static/', verbose_name='Arquivo de audio OGG')
     video = models.FileField(upload_to='static/', verbose_name='Arquivo de video')
 

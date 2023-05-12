@@ -9,7 +9,7 @@ class IdaDialogSerializer(serializers.HyperlinkedModelSerializer):
 class IdaObraSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = idaObra
-        fields = ['obra', 'comando_positivo', 'comando_negativo', 'audio', 'video']
+        fields = ['obra', 'comando_positivo', 'comando_negativo', 'descricao_obra', 'audio', 'video']
 
 class IdaSubComandosSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
