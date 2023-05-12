@@ -11,3 +11,15 @@ class idaStart(models.Model):
 
     def __str__(self):
         return self.titleSound
+    
+class idaInicio(models.Model):
+    class Meta:
+        verbose_name = "Ida Inicio"
+        verbose_name_plural = "Ida Inicio"
+
+    titulo = models.CharField(max_length=50, verbose_name="Titulo da abertura: ")
+    texto = models.CharField(max_length=200, verbose_name="Texto da abertura: ")
+    
+    def __str__(self):
+        return self.texto
+    

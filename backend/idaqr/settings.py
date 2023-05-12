@@ -133,6 +133,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:5000",
+]
+
+
 JAZZMIN_SETTINGS = {
     "site_title": "IdaQR Admin",
     "site_header": "IdaQR Admin",

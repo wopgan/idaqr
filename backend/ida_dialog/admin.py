@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import listDiolog
+from .models import idaObra, idaSubComandos
 
-admin.site.register(listDiolog)
+admin.site.register(idaObra)
+admin.site.register(idaSubComandos)

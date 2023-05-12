@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import idaStart
+from .models import idaInicio
 
-admin.site.register(idaStart)
+admin.site.register(idaInicio)
