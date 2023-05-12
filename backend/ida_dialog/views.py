@@ -35,7 +35,7 @@ class IdaObraViewSet(viewsets.ModelViewSet):
         obra_name = self.request.query_params.get('q')
         queryset = idaObra.objects.all()
         if obra_name:
-            queryset = queryset.filter(obra=obra_name)
+            queryset = queryset.filter(palavra_chave=obra_name)
         return queryset
     
     def list(self, request):

@@ -22,6 +22,7 @@ class idaObra(models.Model):
         verbose_name_plural = "IdaQr Obras"
 
     obra = models.CharField(max_length=100, verbose_name="Obra: ")
+    palavra_chave = models.CharField(max_length=50, default='Palavra Chave' , verbose_name="Palavra chave da pesquisa: ")
     comando_positivo = models.CharField(max_length=50, verbose_name="Comando Positivo: ")
     comando_negativo = models.CharField(max_length=50, verbose_name="Comando Negativo: ")
     descricao_obra = models.TextField(default='.', verbose_name="Descrição da Obra")
