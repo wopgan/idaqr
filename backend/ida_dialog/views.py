@@ -58,9 +58,11 @@ class IdaSubComandoViewSet(viewsets.ModelViewSet):
         comando_name = self.request.query_params.get('q')
         queryset = idaSubComandos.objects.all()
         if comando_name:
-            queryset = queryset.filter(sub_comando=comando_name)
+            palavras_chave = comando_name.split()
+            for comando_name in palavras_chave:
+                queryset = queryset.filter(sub_comando__icontains=comando_name)
         return queryset
-    
+
     def list(self, request):
         comando_name = self.request.query_params.get('q')
         if not comando_name:
@@ -69,7 +71,6 @@ class IdaSubComandoViewSet(viewsets.ModelViewSet):
         obj = queryset.first()
         if not obj:
             return Response({'error': 'Comando não encontrado.'}, status=status.HTTP_404_NOT_FOUND)
-        serializer = IdaSubComandosSerializer(obj)
+        serializer = IdaSubComandosSerializer(obj, context={'request': request})
         return Response(serializer.data)
 
-    
