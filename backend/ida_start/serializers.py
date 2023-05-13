@@ -9,4 +9,4 @@ class IdaStartSerializer(serializers.HyperlinkedModelSerializer):
 class IdaInicioSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = idaInicio
-        fields = ['id', 'titulo', 'texto']
+        fields = ['id', 'titulo', 'texto', 'audio_text', 'audio_start']
